@@ -21,33 +21,25 @@ Pelita Bangsa University
     Berikut adalah perintah-perintah DDL yang digunakan untuk membuat sebuah DBMS berdasarkan skema diatas.
    
     - Membuat sebuah database:
-    ```sql
-    CREATE DATABASE nama_database;
-    ```
+    ```CREATE DATABASE nama_database;```
+
     - Menggunakan sebuah database:
-    ```sql
-    USE nama_database;
-    ```
+
+    ```USE nama_database;```
     - Membuat sebuah tabel:
-    ```sql
-    CREATE TABLE nama_tabel (field1,...,fieldn) VALUE
-    (value1 tipe_data(ukuran),...,
-    (valuen tipe_data(ukuran))
-    );
-    ```
+
+    ```CREATE TABLE nama_tabel (field1,...,fieldn) VALUE```  ```(value1 tipe_data(ukuran),...,```
+    ```(valuen tipe_data(ukuran)) );```
+    
     - Menambah PRIMARY KEY:
-    ```sql
-    ALTER TABLE nama_tabel ADD PRIMARY KEY (nama_field)
-    ```
+    ```ALTER TABLE nama_tabel ADD PRIMARY KEY (nama_field)```
+
     - Menambah CONSTRAINT FOREIGN KEY:
-    ```sql
-    ALTER TABLE nama_tabel ADD CONSTRAINT nama_constraint
-    FOREIGN KEY (nama_field) REFERENCES nama_tabel_referensi(nama_field_referensi)
-    ```
+    ```ALTER TABLE nama_tabel ADD CONSTRAINT nama_constraint```
+    ```FOREIGN KEY (nama_field) REFERENCES nama_tabel_referensi(nama_field_referensi)```
+    
     - Menambah AUTO INCREMENT:
-    ```sql
-    ALTER TABLE nama_tabel MODIFY nama_field tipe_data(ukuran) AUTO_INCREMENT;
-    ```
+   ```ALTER TABLE nama_tabel MODIFY nama_field tipe_data(ukuran) AUTO_INCREMENT;```
 
   2. DML Script 
   Data Manipulation Language (DML) adalah bahasa yang digunakan untuk mengakses, memanipulasi, dan mengubah data dalam database. Berikut adalah perintah-perintah DML yang digunakan untuk membuat sebuah DMS berdasarkan skema diatas.
@@ -106,5 +98,4 @@ Oleh karena itu, ketika kita ingin mencari data yang berada dalam rentang nilai 
 • Berikan kesimpulan anda!
 
 Kesimpulannya, operator BETWEEN dan operator >= dan <= secara terpisah dapat digunakan untuk mencari data dalam rentang nilai tertentu, tetapi memiliki perbedaan dalam penulisan dan hasil yang dihasilkan. Operator BETWEEN memudahkan penggunaan rentang nilai, sementara operator >= dan <= memerlukan pernyataan tambahan jika ingin memasukkan nilai awal dan akhir dalam pencarian data. Pilihan antara kedua operator tersebut tergantung pada kebutuhan dan kompleksitas dari pencarian data yang ingin dilakukan.
-
 
