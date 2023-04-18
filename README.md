@@ -20,62 +20,47 @@ Pelita Bangsa University
     Data definition Language (DDL) adalah bahasa pemrogaraman yang digunakan untuk mengola objek database, seperti tabel, indeks, dan constraint. DDL digunakan untuk membuat, mengubah dan menghapus struktur database, termasuk tabel, kolom, kunci utama, indeks dan tampilan.
     Berikut adalah perintah-perintah DDL yang digunakan untuk membuat sebuah DBMS berdasarkan skema diatas.
    
-    - Membuat sebuah database:
+- Membuat sebuah database:
     ```CREATE DATABASE nama_database;```
 
-    - Menggunakan sebuah database:
-
+- Menggunakan sebuah database:
     ```USE nama_database;```
-    - Membuat sebuah tabel:
-
-    ```CREATE TABLE nama_tabel (field1,...,fieldn) VALUE```  ```(value1 tipe_data(ukuran),...,```
-    ```(valuen tipe_data(ukuran)) );```
+- Membuat sebuah tabel:
+    ```CREATE TABLE nama_tabel (field1,...,fieldn) VALUE (value1 tipe_data(ukuran),...,(valuen tipe_data(ukuran)) );```
     
-    - Menambah PRIMARY KEY:
-    ```ALTER TABLE nama_tabel ADD PRIMARY KEY (nama_field)```
+- Menambah PRIMARY KEY:
+    ```ALTER TABLE nama_tabel ADD PRIMARY KEY (nama_field);```
 
-    - Menambah CONSTRAINT FOREIGN KEY:
-    ```ALTER TABLE nama_tabel ADD CONSTRAINT nama_constraint```
-    ```FOREIGN KEY (nama_field) REFERENCES nama_tabel_referensi(nama_field_referensi)```
+- Menambah CONSTRAINT FOREIGN KEY:
+    ```ALTER TABLE nama_tabel ADD CONSTRAINT nama_constraint;```
+    ```FOREIGN KEY (nama_field) REFERENCES nama_tabel_referensi(nama_field_referensi);```
     
-    - Menambah AUTO INCREMENT:
+- Menambah AUTO INCREMENT:
    ```ALTER TABLE nama_tabel MODIFY nama_field tipe_data(ukuran) AUTO_INCREMENT;```
 
   2. DML Script 
   Data Manipulation Language (DML) adalah bahasa yang digunakan untuk mengakses, memanipulasi, dan mengubah data dalam database. Berikut adalah perintah-perintah DML yang digunakan untuk membuat sebuah DMS berdasarkan skema diatas.
 
-    - Menambah data:
-    ```sql
-    INSERT INTO <table_name> (filed1,...,fieldn) VALUE (val1,...,valn);
-    ```
-    - Mengubah data:
-    ```sql
-    UPDATE <table_name> SET [field1=val1,..,fieldn=valn] WHERE <kondisi>
-    ```
-    - Menghapus data:
-    ```sql
-    DELETE FROM <table_name> WHERE <kondisi>
-    ```
-    - Menampilkan data:
-    ```sql
-    SELECT * FROM <table_name>
-    ```
-    - Menampilkan data sesuai kondisi:
-    ```sql
-    SELECT * FROM <table_name> WHERE <kondisi>
-    Selisih tahun
-    ```
-    ```sql
-    SELECT * FROM <table_name> WHERE TIMESTAMPDIFF (YEAR, tgl_lahir, CURDATE()) < usia
-    Sesuai urutan
-    ```
-    ```sql
-    SELECT * FROM <table_name>  WHERE ORDER BY <acuan>
-    Sesuai field/kolom yang di inginkan
-    ```
-    ```sql
-    SELECT <field1,...,fieldn> FROM <nama_tabel>;
-    ```
+- Menambah data:
+    ```INSERT INTO <table_name> (filed1,...,fieldn) VALUE (val1,...,valn);```
+
+- Mengubah data:
+    ```UPDATE <table_name> SET [field1=val1,..,fieldn=valn] WHERE <kondisi>;```
+
+- Menghapus data:
+    ```DELETE FROM <table_name> WHERE <kondisi>;```
+
+- Menampilkan data:
+    ```SELECT * FROM <table_name>;```
+
+- Menampilkan data sesuai kondisi:
+    ```SELECT * FROM <table_name> WHERE <kondisi>Selisih tahun;```
+  
+    ```SELECT * FROM <table_name> WHERE TIMESTAMPDIFF (YEAR, tgl_lahir, CURDATE()) < usia Sesuai urutan```
+    
+    ```SELECT * FROM <table_name>  WHERE ORDER BY <acuan>;```
+Sesuai field/kolom yang di inginkan
+    ```SELECT <field1,...,fieldn> FROM <nama_tabel>;```
 
 # Buat laporan praktikum yang berisi, langkah-langkah praktikum
 beserta screenshot yang sudah dilakukan dalam bentuk dokumen.
