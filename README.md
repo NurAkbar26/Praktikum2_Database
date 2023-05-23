@@ -1,70 +1,72 @@
 # Praktikum2_Database
+
 ```
 Nama : Nurul Akbar
 NIM  : 312210413
 Pelita Bangsa University
 ```
+
 # DDL (Data Definition Language) & DML (Data Manipulation Language)
+
 ![img](gambar/27.png)
 
-
 - Data Model Mapping
-    - Mahasiswa (nim, nama, jenis_kelamin, tgl_lahir, jalan, kota, kodepos, no_hp, kd_ds)
-    - Dosen (kd_ds, nama)
-    - Matakuliah (kd_mk, nama, sks)
-    - JadwalMengajar (kd_ds, kd_mk, hari, jam, ruang)
-    - KRSMahasiswa (nim, kd_mk, kd_ds, semester, nilai)
+  - Mahasiswa (nim, nama, jenis_kelamin, tgl_lahir, jalan, kota, kodepos, no_hp, kd_ds)
+  - Dosen (kd_ds, nama)
+  - Matakuliah (kd_mk, nama, sks)
+  - JadwalMengajar (kd_ds, kd_mk, hari, jam, ruang)
+  - KRSMahasiswa (nim, kd_mk, kd_ds, semester, nilai)
 
 # A.Script DDL & DML
-  1. DDL Script
-    Data definition Language (DDL) adalah bahasa pemrogaraman yang digunakan untuk mengola objek database, seperti tabel, indeks, dan constraint. DDL digunakan untuk membuat, mengubah dan menghapus struktur database, termasuk tabel, kolom, kunci utama, indeks dan tampilan.
-    Berikut adalah perintah-perintah DDL yang digunakan untuk membuat sebuah DBMS berdasarkan skema diatas.
-   
+
+1. DDL Script
+   Data definition Language (DDL) adalah bahasa pemrogaraman yang digunakan untuk mengola objek database, seperti tabel, indeks, dan constraint. DDL digunakan untuk membuat, mengubah dan menghapus struktur database, termasuk tabel, kolom, kunci utama, indeks dan tampilan.
+   Berikut adalah perintah-perintah DDL yang digunakan untuk membuat sebuah DBMS berdasarkan skema diatas.
+
 - Membuat sebuah database:
-    ```CREATE DATABASE nama_database;```
+  `CREATE DATABASE nama_database;`
 
 - Menggunakan sebuah database:
-    ```USE nama_database;```
+  `USE nama_database;`
 - Membuat sebuah tabel:
-    ```CREATE TABLE nama_tabel (field1,...,fieldn) VALUE (value1 tipe_data(ukuran),...,(valuen tipe_data(ukuran)) );```
-    
+  `CREATE TABLE nama_tabel (field1,...,fieldn) VALUE (value1 tipe_data(ukuran),...,(valuen tipe_data(ukuran)) );`
 - Menambah PRIMARY KEY:
-    ```ALTER TABLE nama_tabel ADD PRIMARY KEY (nama_field);```
+  `ALTER TABLE nama_tabel ADD PRIMARY KEY (nama_field);`
 
 - Menambah CONSTRAINT FOREIGN KEY:
-    ```ALTER TABLE nama_tabel ADD CONSTRAINT nama_constraint;```
-    ```FOREIGN KEY (nama_field) REFERENCES nama_tabel_referensi(nama_field_referensi);```
-    
+  `ALTER TABLE nama_tabel ADD CONSTRAINT nama_constraint;`
+  `FOREIGN KEY (nama_field) REFERENCES nama_tabel_referensi(nama_field_referensi);`
 - Menambah AUTO INCREMENT:
-   ```ALTER TABLE nama_tabel MODIFY nama_field tipe_data(ukuran) AUTO_INCREMENT;```
+  `ALTER TABLE nama_tabel MODIFY nama_field tipe_data(ukuran) AUTO_INCREMENT;`
 
-  2. DML Script 
-  Data Manipulation Language (DML) adalah bahasa yang digunakan untuk mengakses, memanipulasi, dan mengubah data dalam database. Berikut adalah perintah-perintah DML yang digunakan untuk membuat sebuah DMS berdasarkan skema diatas.
+  2. DML Script
+     Data Manipulation Language (DML) adalah bahasa yang digunakan untuk mengakses, memanipulasi, dan mengubah data dalam database. Berikut adalah perintah-perintah DML yang digunakan untuk membuat sebuah DMS berdasarkan skema diatas.
 
 - Menambah data:
-    ```INSERT INTO <table_name> (filed1,...,fieldn) VALUE (val1,...,valn);```
+  `INSERT INTO <table_name> (filed1,...,fieldn) VALUE (val1,...,valn);`
 
 - Mengubah data:
-    ```UPDATE <table_name> SET [field1=val1,..,fieldn=valn] WHERE <kondisi>;```
+  `UPDATE <table_name> SET [field1=val1,..,fieldn=valn] WHERE <kondisi>;`
 
 - Menghapus data:
-    ```DELETE FROM <table_name> WHERE <kondisi>;```
+  `DELETE FROM <table_name> WHERE <kondisi>;`
 
 - Menampilkan data:
-    ```SELECT * FROM <table_name>;```
+  `SELECT * FROM <table_name>;`
 
 - Menampilkan data sesuai kondisi:
-    ```SELECT * FROM <table_name> WHERE <kondisi>Selisih tahun;```
-  
-    ```SELECT * FROM <table_name> WHERE TIMESTAMPDIFF (YEAR, tgl_lahir, CURDATE()) < usia Sesuai urutan```
-    
-    ```SELECT * FROM <table_name>  WHERE ORDER BY <acuan>;```
-Sesuai field/kolom yang di inginkan
-    ```SELECT <field1,...,fieldn> FROM <nama_tabel>;```
+  `SELECT * FROM <table_name> WHERE <kondisi>Selisih tahun;`
+      ```SELECT * FROM <table_name> WHERE TIMESTAMPDIFF (YEAR, tgl_lahir, CURDATE()) < usia Sesuai urutan```
+
+      ```SELECT * FROM <table_name>  WHERE ORDER BY <acuan>;```
+  Sesuai field/kolom yang di inginkan
+  `SELECT <field1,...,fieldn> FROM <nama_tabel>;`
 
 # Buat laporan praktikum yang berisi, langkah-langkah praktikum
+
 beserta screenshot yang sudah dilakukan dalam bentuk dokumen.
 untuk bukti laporan dan isi screenshoot ada di `laporan praktikum 2 basis data`
+
 # B. Evaluasi dan Pertanyaan
 
 • Apa bedanya penggunaan BETWEEN dan penggunaan operator >=
@@ -83,4 +85,3 @@ Oleh karena itu, ketika kita ingin mencari data yang berada dalam rentang nilai 
 • Berikan kesimpulan anda!
 
 Kesimpulannya, operator BETWEEN dan operator >= dan <= secara terpisah dapat digunakan untuk mencari data dalam rentang nilai tertentu, tetapi memiliki perbedaan dalam penulisan dan hasil yang dihasilkan. Operator BETWEEN memudahkan penggunaan rentang nilai, sementara operator >= dan <= memerlukan pernyataan tambahan jika ingin memasukkan nilai awal dan akhir dalam pencarian data. Pilihan antara kedua operator tersebut tergantung pada kebutuhan dan kompleksitas dari pencarian data yang ingin dilakukan.
-
